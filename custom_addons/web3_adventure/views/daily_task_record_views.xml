@@ -1,0 +1,105 @@
+<odoo>
+    <!-- 列表视图 (list View) -->
+    <record id="view_daily_task_record_list" model="ir.ui.view">
+        <field name="name">daily.task.record.list</field>
+        <field name="model">daily.task.record</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="task_id"/>
+                <field name="operate_date"/>
+                <field name="task_link"/>
+                <field name="faucet_link"/>
+                <field name="state"
+                       decoration-danger="state == 'todo'"
+                       decoration-success="state == 'done'"
+                       decoration-muted="state == 'undone'" widget="badge"/>
+                <field name="priority"
+                       decoration-danger="priority == 'very_high'"
+                       decoration-warning="priority == 'hign'"
+                       decoration-info="priority == 'medium'"
+                       decoration-muted="priority == 'low'" widget="badge"/>
+            </list>
+        </field>
+    </record>
+
+    <!-- 详情视图 (Form View) -->
+    <record id="view_daily_task_record_form" model="ir.ui.view">
+        <field name="name">daily.task.record.form</field>
+        <field name="model">daily.task.record</field>
+        <field name="arch" type="xml">
+            <form string="每日任务清单">
+                <header>
+                    <button name="action_done" type="object" string="标记完成"
+                            class="btn-primary" invisible="state != 'todo'"/>
+                </header>
+                <sheet>
+                    <group>
+                        <field name="task_id"/>
+                        <field name="operate_date"/>
+                        <field name="state"
+                               decoration-danger="state == 'todo'"
+                               decoration-success="state == 'done'"
+                               decoration-muted="state == 'undone'" widget="badge"/>
+                        <field name="sequence"/>
+                        <field name="priority"
+                               decoration-danger="priority == 'very_high'"
+                               decoration-warning="priority == 'hign'"
+                               decoration-info="priority == 'medium'"
+                               decoration-muted="priority == 'low'" widget="badge"/>
+                        <field name="active" invisible="1"/>
+                    </group>
+                    <group string="任务信息">
+                        <field name="task_link"/>
+                        <field name="faucet_link"/>
+                        <field name="description"/>
+                    </group>
+                    <group string="登录信息">
+                        <field name="login_type"/>
+                        <field name="login_account" invisible="login_type != 'self'"/>
+                        <field name="login_password" invisible="login_type != 'self'"/>
+                        <field name="login_wallet" invisible="login_type != 'wallet'"/>
+                        <field name="login_social_account" invisible="login_type != 'social'"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- 搜索视图 (Search View) -->
+    <record id="view_daily_task_record_search" model="ir.ui.view">
+        <field name="name">daily.task.record.search</field>
+        <field name="model">daily.task.record</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="task_id"/>
+                <field name="state"/>
+                <field name="operate_date"/>
+                <field name="priority"/>
+                <!-- 预定义过滤器 -->
+                <filter string="今日" name="today"
+                        domain="[('operate_date', '=', context_today())]"/>
+                <separator/>
+                <filter string="待办" name="todo"
+                        domain="[('state', '=', 'todo')]"/>
+                <filter string="已完成" name="done"
+                        domain="[('state', '=', 'done')]"/>
+                <filter string="未做" name="undone"
+                        domain="[('state', '=', 'undone')]"/>
+
+                <group expand="0" string="Group By">
+                    <filter string="日期" name="operate_date" domain="[]" context="{'group_by': 'operate_date'}"/>
+                    <filter string="状态" name="state" domain="[]" context="{'group_by': 'state'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <!-- 窗口动作 (Window Action) -->
+    <record id="action_daily_task_record" model="ir.actions.act_window">
+        <field name="name">每日任务清单</field>
+        <field name="res_model">daily.task.record</field>
+        <field name="view_mode">list,form</field>
+        <field name="context">{'search_default_todo':1, 'search_default_today': 1}</field>
+    </record>
+
+</odoo>

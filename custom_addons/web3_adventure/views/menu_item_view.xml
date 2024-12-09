@@ -1,0 +1,41 @@
+<odoo><data>
+
+    <!-- 一级菜单 Web3项目-->
+    <menuitem id="menu_web3_root" name="Web3管理" sequence="1"/>
+
+    <!-- 每日任务 菜单 -->
+    <menuitem id="menu_daily_task_record" name="每日任务清单"
+              parent="menu_web3_root" action="action_daily_task_record" sequence="1"/>
+
+    <!-- Web3任务列表 菜单 -->
+    <menuitem id="menu_web3_tasks" name="Web3任务"
+              parent="menu_web3_root" action="action_web3_tasks" sequence="5"/>
+
+    <!-- Web3项目 菜单 -->
+    <menuitem id="menu_web3_project" name="Web3项目"
+              parent="menu_web3_root" action="action_web3_project" sequence="10"/>
+
+     <!-- Web3设置 菜单 -->
+    <menuitem id="menu_web3_setting" name="配置"
+              parent="menu_web3_root" sequence="990"/>
+
+    <!-- 虚拟货币类型 菜单 -->
+    <menuitem id="menu_web3_currency_type" name="虚拟币种类"
+              parent="menu_web3_setting" action="action_web3_currency_type" sequence="5"/>
+
+    <!-- 钱包类型 菜单 -->
+    <menuitem id="menu_web3_wallet_type" name="钱包种类"
+              parent="menu_web3_setting" action="action_web3_wallet_type" sequence="10"/>
+
+    <!-- web3钱包 菜单 -->
+    <menuitem id="menu_web3_wallet" name="Web3钱包"
+              parent="menu_web3_setting" action="action_web3_wallet" sequence="20"/>
+
+    <!-- 社交账号类型 菜单 -->
+    <menuitem id="menu_social_account_type" name="社交帐号种类"
+              parent="menu_web3_setting" action="action_social_account_type" sequence="30"/>
+
+    <!-- 社交账号 菜单 -->
+    <menuitem id="menu_social_account" name="社交账号"
+              parent="menu_web3_setting" action="action_social_account" sequence="40"/>
+</data></odoo>

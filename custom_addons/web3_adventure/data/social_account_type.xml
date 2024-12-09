@@ -1,0 +1,32 @@
+<odoo><data>
+    <record id="social_account_type_twitter" model="social.account.type">
+        <field name="code">Twitter</field>
+        <field name="name">推特</field>
+        <field name="abbr_name">推特</field>
+    </record>
+    <record id="social_account_type_gmail" model="social.account.type">
+        <field name="code">Gmail</field>
+        <field name="name">谷歌邮箱</field>
+        <field name="abbr_name">谷歌</field>
+    </record>
+    <record id="social_account_type_dc" model="social.account.type">
+        <field name="code">Discord</field>
+        <field name="name">Discord</field>
+        <field name="abbr_name">DC</field>
+    </record>
+    <record id="social_account_type_telegram" model="social.account.type">
+        <field name="code">Telegram</field>
+        <field name="name">Telegram</field>
+        <field name="abbr_name">电报</field>
+    </record>
+    <record id="social_account_type_instgram" model="social.account.type">
+        <field name="code">Instgram</field>
+        <field name="name">Instgram</field>
+        <field name="abbr_name">ins</field>
+    </record>
+    <record id="social_account_type_facebook" model="social.account.type">
+        <field name="code">Facebook</field>
+        <field name="name">Facebook</field>
+        <field name="abbr_name">脸书</field>
+    </record>
+</data></odoo>

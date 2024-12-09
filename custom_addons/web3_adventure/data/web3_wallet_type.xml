@@ -1,0 +1,22 @@
+<odoo><data>
+    <record id="crypto_wallet_type_okx" model="web3.wallet.type">
+        <field name="code">OKX</field>
+        <field name="name">OKX</field>
+    </record>
+    <record id="crypto_wallet_type_metamask" model="web3.wallet.type">
+        <field name="code">Metamask</field>
+        <field name="name">小狐狸</field>
+    </record>
+    <record id="crypto_wallet_type_phamton" model="web3.wallet.type">
+        <field name="code">Phamton</field>
+        <field name="name">Phamton</field>
+    </record>
+    <record id="crypto_wallet_type_unisat" model="web3.wallet.type">
+        <field name="code">Unisat</field>
+        <field name="name">Unisat</field>
+    </record>
+    <record id="crypto_wallet_type_keplr" model="web3.wallet.type">
+        <field name="code">Keplr</field>
+        <field name="name">Keplr</field>
+    </record>
+</data></odoo>

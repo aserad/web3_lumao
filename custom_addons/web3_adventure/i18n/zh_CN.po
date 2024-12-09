@@ -1,0 +1,387 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* web3_adventure
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 18.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-10-10 07:46+0000\n"
+"PO-Revision-Date: 2024-10-10 07:46+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: web3_adventure
+#: model:ir.model.fields,field_description:web3_adventure.field_social_account_type__abbr_name
+msgid "Abbreviation"
+msgstr "简称"
+
+#. module: web3_adventure
+#: model:ir.model.fields,field_description:web3_adventure.field_social_account__account
+msgid "Account"
+msgstr "账号"
+
+#. module: web3_adventure
+#: model_terms:ir.ui.view,arch_db:web3_adventure.view_web3_project_form
+msgid "Additional Information"
+msgstr "其他信息"
+
+#. module: web3_adventure
+#: model:ir.model.fields,field_description:web3_adventure.field_web3_wallet__address_ids
+#: model:ir.model.fields,field_description:web3_adventure.field_web3_wallet_address__address
+msgid "Address"
+msgstr "钱包地址"
+
+#. module: web3_adventure
+#: model:ir.model.fields,field_description:web3_adventure.field_web3_project__aridrop_amount
+msgid "Airdrop Amount"
+msgstr "空投数量"
+
+#. module: web3_adventure
+#: model:ir.model.fields,field_description:web3_adventure.field_web3_project__airdrop_date
+msgid "Airdrop Date"
+msgstr "空投日期"
+
+#. module: web3_adventure
+#: model_terms:ir.actions.act_window,help:web3_adventure.action_web3_project
+msgid "Click to create a new Web3 Project."
+msgstr "点击创建新的Web3项目"
+
+#. module: web3_adventure
+#: model:ir.model.fields,field_description:web3_adventure.field_social_account_type__code
+#: model:ir.model.fields,field_description:web3_adventure.field_web3_wallet_type__code
+msgid "Code"
+msgstr "编码"
+
+#. module: web3_adventure
+#: model:ir.model.fields,field_description:web3_adventure.field_web3_project__costs
+msgid "Costs"
+msgstr "成本"
+
+#. module: web3_adventure
+#: model:ir.model.fields,field_description:web3_adventure.field_social_account__create_uid
+#: model:ir.model.fields,field_description:web3_adventure.field_social_account_type__create_uid
+#: model:ir.model.fields,field_description:web3_adventure.field_web3_currency_type__create_uid
+#: model:ir.model.fields,field_description:web3_adventure.field_web3_project__create_uid
+#: model:ir.model.fields,field_description:web3_adventure.field_web3_wallet__create_uid
+#: model:ir.model.fields,field_description:web3_adventure.field_web3_wallet_address__create_uid
+#: model:ir.model.fields,field_description:web3_adventure.field_web3_wallet_type__create_uid
+msgid "Created by"
+msgstr "创建人"
+
+#. module: web3_adventure
+#: model:ir.model.fields,field_description:web3_adventure.field_social_account__create_date
+#: model:ir.model.fields,field_description:web3_adventure.field_social_account_type__create_date
+#: model:ir.model.fields,field_description:web3_adventure.field_web3_currency_type__create_date
+#: model:ir.model.fields,field_description:web3_adventure.field_web3_project__create_date
+#: model:ir.model.fields,field_description:web3_adventure.field_web3_wallet__create_date
+#: model:ir.model.fields,field_description:web3_adventure.field_web3_wallet_address__create_date
+#: model:ir.model.fields,field_description:web3_adventure.field_web3_wallet_type__create_date
+msgid "Created on"
+msgstr "创建时间"
+
+#. module: web3_adventure
+#: model:ir.model.fields,field_description:web3_adventure.field_web3_project__wallet_ids
+#: model_terms:ir.ui.view,arch_db:web3_adventure.view_web3_wallet_form
+msgid "Crypto Wallet"
+msgstr "Web3钱包"
+
+#. module: web3_adventure
+#: model:ir.actions.act_window,name:web3_adventure.action_web3_wallet
+#: model:ir.ui.menu,name:web3_adventure.menu_web3_wallet
+msgid "Crypto Wallets"
+msgstr "Web3钱包"
+
+#. module: web3_adventure
+#: model:ir.model.fields,field_description:web3_adventure.field_web3_wallet_address__currency_ids
+msgid "Currency"
+msgstr "币种"
+
+#. module: web3_adventure
+#: model:ir.ui.menu,name:web3_adventure.menu_web3_currency_type
+msgid "Currency Types"
+msgstr "币种"
+
+#. module: web3_adventure
+#: model:ir.model.fields,field_description:web3_adventure.field_web3_project__description
+msgid "Description"
+msgstr "描述"
+
+#. module: web3_adventure
+#: model:ir.model.fields,field_description:web3_adventure.field_social_account__display_name
+#: model:ir.model.fields,field_description:web3_adventure.field_social_account_type__display_name
+#: model:ir.model.fields,field_description:web3_adventure.field_web3_currency_type__display_name
+#: model:ir.model.fields,field_description:web3_adventure.field_web3_project__display_name
+#: model:ir.model.fields,field_description:web3_adventure.field_web3_wallet__display_name
+#: model:ir.model.fields,field_description:web3_adventure.field_web3_wallet_address__display_name
+#: model:ir.model.fields,field_description:web3_adventure.field_web3_wallet_type__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: web3_adventure
+#: model:ir.model.fields,field_description:web3_adventure.field_web3_project__faucet_link
+msgid "Faucet Link"
+msgstr "领水地址"
+
+#. module: web3_adventure
+#: model:ir.model.fields.selection,name:web3_adventure.selection__web3_project__priority__high
+msgid "High"
+msgstr "高"
+
+#. module: web3_adventure
+#: model:ir.model.fields,field_description:web3_adventure.field_social_account__id
+#: model:ir.model.fields,field_description:web3_adventure.field_social_account_type__id
+#: model:ir.model.fields,field_description:web3_adventure.field_web3_currency_type__id
+#: model:ir.model.fields,field_description:web3_adventure.field_web3_project__id
+#: model:ir.model.fields,field_description:web3_adventure.field_web3_wallet__id
+#: model:ir.model.fields,field_description:web3_adventure.field_web3_wallet_address__id
+#: model:ir.model.fields,field_description:web3_adventure.field_web3_wallet_type__id
+msgid "ID"
+msgstr "ID"
+
+#. module: web3_adventure
+#: model:ir.model.fields,field_description:web3_adventure.field_social_account__write_uid
+#: model:ir.model.fields,field_description:web3_adventure.field_social_account_type__write_uid
+#: model:ir.model.fields,field_description:web3_adventure.field_web3_currency_type__write_uid
+#: model:ir.model.fields,field_description:web3_adventure.field_web3_project__write_uid
+#: model:ir.model.fields,field_description:web3_adventure.field_web3_wallet__write_uid
+#: model:ir.model.fields,field_description:web3_adventure.field_web3_wallet_address__write_uid
+#: model:ir.model.fields,field_description:web3_adventure.field_web3_wallet_type__write_uid
+msgid "Last Updated by"
+msgstr "更新人"
+
+#. module: web3_adventure
+#: model:ir.model.fields,field_description:web3_adventure.field_social_account__write_date
+#: model:ir.model.fields,field_description:web3_adventure.field_social_account_type__write_date
+#: model:ir.model.fields,field_description:web3_adventure.field_web3_currency_type__write_date
+#: model:ir.model.fields,field_description:web3_adventure.field_web3_project__write_date
+#: model:ir.model.fields,field_description:web3_adventure.field_web3_wallet__write_date
+#: model:ir.model.fields,field_description:web3_adventure.field_web3_wallet_address__write_date
+#: model:ir.model.fields,field_description:web3_adventure.field_web3_wallet_type__write_date
+msgid "Last Updated on"
+msgstr "更新时间"
+
+#. module: web3_adventure
+#: model:ir.model.fields,field_description:web3_adventure.field_web3_project__login_account
+msgid "Login Account"
+msgstr "登录账号"
+
+#. module: web3_adventure
+#: model_terms:ir.ui.view,arch_db:web3_adventure.view_web3_project_form
+msgid "Login Details"
+msgstr "登录信息"
+
+#. module: web3_adventure
+#: model:ir.model.fields,field_description:web3_adventure.field_web3_project__login_password
+msgid "Login Password"
+msgstr "登录密码"
+
+#. module: web3_adventure
+#: model:ir.model.fields,field_description:web3_adventure.field_web3_project__login_social_account
+msgid "Login Social Account"
+msgstr "登录社交媒体"
+
+#. module: web3_adventure
+#: model:ir.model.fields,field_description:web3_adventure.field_web3_project__login_type
+msgid "Login Type"
+msgstr "登录类型"
+
+#. module: web3_adventure
+#: model:ir.model.fields,field_description:web3_adventure.field_web3_project__login_wallet
+msgid "Login Wallet"
+msgstr "登录钱包"
+
+#. module: web3_adventure
+#: model:ir.model.fields.selection,name:web3_adventure.selection__web3_project__priority__low
+msgid "Low"
+msgstr "低"
+
+#. module: web3_adventure
+#: model:ir.model.fields,field_description:web3_adventure.field_web3_wallet__main_address
+msgid "Main Address"
+msgstr "常用地址"
+
+#. module: web3_adventure
+#: model:ir.model.fields.selection,name:web3_adventure.selection__web3_project__priority__medium
+msgid "Medium"
+msgstr "中"
+
+#. module: web3_adventure
+#: model:ir.model.fields,field_description:web3_adventure.field_social_account__name
+#: model:ir.model.fields,field_description:web3_adventure.field_social_account_type__name
+#: model:ir.model.fields,field_description:web3_adventure.field_web3_currency_type__name
+#: model:ir.model.fields,field_description:web3_adventure.field_web3_project__name
+#: model:ir.model.fields,field_description:web3_adventure.field_web3_wallet__name
+#: model:ir.model.fields,field_description:web3_adventure.field_web3_wallet_address__name
+#: model:ir.model.fields,field_description:web3_adventure.field_web3_wallet_type__name
+msgid "Name"
+msgstr "名称"
+
+#. module: web3_adventure
+#: model:ir.model.fields,field_description:web3_adventure.field_web3_project__note
+msgid "Note"
+msgstr "备注"
+
+#. module: web3_adventure
+#: model:ir.model.fields,field_description:web3_adventure.field_social_account__password
+msgid "Password"
+msgstr "密码"
+
+#. module: web3_adventure
+#: model:ir.model.fields,field_description:web3_adventure.field_web3_project__priority
+msgid "Priority"
+msgstr "优先级"
+
+#. module: web3_adventure
+#: model:ir.model.fields,field_description:web3_adventure.field_web3_project__progress
+msgid "Progress"
+msgstr "进度"
+
+#. module: web3_adventure
+#: model:ir.model.fields,field_description:web3_adventure.field_web3_project__project_link
+msgid "Project Link"
+msgstr "项目地址"
+
+#. module: web3_adventure
+#: model:ir.model.fields.selection,name:web3_adventure.selection__web3_project__login_type__self
+msgid "Self-created Account"
+msgstr "自有账号"
+
+#. module: web3_adventure
+#: model:ir.model.fields,field_description:web3_adventure.field_social_account__sequence
+#: model:ir.model.fields,field_description:web3_adventure.field_web3_project__sequence
+#: model:ir.model.fields,field_description:web3_adventure.field_web3_wallet__sequence
+msgid "Sequence"
+msgstr "序号"
+
+#. module: web3_adventure
+#: model:ir.model.fields,field_description:web3_adventure.field_web3_project__snapshot_date
+msgid "Snapshot Date"
+msgstr "快照日期"
+
+#. module: web3_adventure
+#: model:ir.model,name:web3_adventure.model_social_account
+#: model:ir.model.fields,field_description:web3_adventure.field_web3_project__social_account_ids
+#: model_terms:ir.ui.view,arch_db:web3_adventure.view_social_account_form
+msgid "Social Account"
+msgstr "社交账号"
+
+#. module: web3_adventure
+#: model:ir.model.fields.selection,name:web3_adventure.selection__web3_project__login_type__social
+msgid "Social Account Login"
+msgstr "社交账号登录"
+
+#. module: web3_adventure
+#: model:ir.model,name:web3_adventure.model_social_account_type
+#: model:ir.model.fields,field_description:web3_adventure.field_social_account__social_account_type
+#: model_terms:ir.ui.view,arch_db:web3_adventure.view_social_account_type_form
+msgid "Social Account Type"
+msgstr "社交账号类型"
+
+#. module: web3_adventure
+#: model:ir.actions.act_window,name:web3_adventure.action_social_account_type
+#: model:ir.ui.menu,name:web3_adventure.menu_social_account_type
+msgid "Social Account Types"
+msgstr "社交账号类型"
+
+#. module: web3_adventure
+#: model:ir.actions.act_window,name:web3_adventure.action_social_account
+#: model:ir.ui.menu,name:web3_adventure.menu_social_account
+#: model_terms:ir.ui.view,arch_db:web3_adventure.view_web3_project_form
+msgid "Social Accounts"
+msgstr "社交账号"
+
+#. module: web3_adventure
+#: model:ir.model.fields,field_description:web3_adventure.field_web3_project__task_link
+msgid "Task Link"
+msgstr "任务地址"
+
+#. module: web3_adventure
+#: model:ir.model.fields.selection,name:web3_adventure.selection__web3_project__priority__very_high
+msgid "Very High"
+msgstr "极高"
+
+#. module: web3_adventure
+#: model:ir.model.fields,field_description:web3_adventure.field_web3_wallet_address__wallet_id
+msgid "Wallet"
+msgstr "钱包"
+
+#. module: web3_adventure
+#: model:ir.model.fields.selection,name:web3_adventure.selection__web3_project__login_type__wallet
+msgid "Wallet Login"
+msgstr "Web3钱包登录"
+
+#. module: web3_adventure
+#: model:ir.model.fields,field_description:web3_adventure.field_web3_wallet__wallet_name
+msgid "Wallet Name"
+msgstr "钱包名称"
+
+#. module: web3_adventure
+#: model:ir.model.fields,field_description:web3_adventure.field_web3_wallet__wallet_type_id
+#: model_terms:ir.ui.view,arch_db:web3_adventure.view_web3_currency_type_form
+#: model_terms:ir.ui.view,arch_db:web3_adventure.view_web3_wallet_type_form
+msgid "Wallet Type"
+msgstr "Web3钱包类型"
+
+#. module: web3_adventure
+#: model:ir.actions.act_window,name:web3_adventure.action_web3_currency_type
+#: model:ir.actions.act_window,name:web3_adventure.action_web3_wallet_type
+#: model:ir.ui.menu,name:web3_adventure.menu_web3_wallet_type
+msgid "Wallet Types"
+msgstr "Web3钱包类型"
+
+#. module: web3_adventure
+#: model:ir.ui.menu,name:web3_adventure.menu_web3_root
+msgid "Web3 Management"
+msgstr "Web3管理"
+
+#. module: web3_adventure
+#: model:ir.model,name:web3_adventure.model_web3_project
+#: model_terms:ir.ui.view,arch_db:web3_adventure.view_web3_project_form
+msgid "Web3 Project"
+msgstr "Web3项目"
+
+#. module: web3_adventure
+#: model:ir.actions.act_window,name:web3_adventure.action_web3_project
+#: model:ir.ui.menu,name:web3_adventure.menu_web3_project
+msgid "Web3 Projects"
+msgstr "Web3项目"
+
+#. module: web3_adventure
+#: model:ir.ui.menu,name:web3_adventure.menu_web3_setting
+msgid "Web3 Setting"
+msgstr "配置"
+
+#. module: web3_adventure
+#: model_terms:ir.ui.view,arch_db:web3_adventure.view_web3_project_form
+msgid "Web3 Wallets"
+msgstr "Web3钱包"
+
+#. module: web3_adventure
+#: model:ir.model.fields,field_description:web3_adventure.field_web3_wallet_address__sequence
+msgid "sequence"
+msgstr "序号"
+
+#. module: web3_adventure
+#: model:ir.model,name:web3_adventure.model_web3_currency_type
+msgid "web3.currency.type"
+msgstr ""
+
+#. module: web3_adventure
+#: model:ir.model,name:web3_adventure.model_web3_wallet
+msgid "web3.wallet"
+msgstr ""
+
+#. module: web3_adventure
+#: model:ir.model,name:web3_adventure.model_web3_wallet_address
+msgid "web3.wallet.address"
+msgstr ""
+
+#. module: web3_adventure
+#: model:ir.model,name:web3_adventure.model_web3_wallet_type
+msgid "web3.wallet.type"
+msgstr ""

@@ -1,0 +1,48 @@
+<odoo>
+    <!-- 列表视图 (list View) -->
+    <record id="view_web3_wallet_type_list" model="ir.ui.view">
+        <field name="name">web3.wallet.type.list</field>
+        <field name="model">web3.wallet.type</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="code"/>
+                <field name="name"/>
+            </list>
+        </field>
+    </record>
+
+    <!-- 详情视图 (Form View) -->
+    <record id="view_web3_wallet_type_form" model="ir.ui.view">
+        <field name="name">web3.wallet.type.form</field>
+        <field name="model">web3.wallet.type</field>
+        <field name="arch" type="xml">
+            <form string="Wallet Type">
+                <sheet>
+                    <group>
+                        <field name="code"/>
+                        <field name="name"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- 搜索视图 (Search View) -->
+    <record id="view_web3_wallet_type_search" model="ir.ui.view">
+        <field name="name">web3.wallet.type.search</field>
+        <field name="model">web3.wallet.type</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="code"/>
+                <field name="name"/>
+            </search>
+        </field>
+    </record>
+
+    <!-- 窗口动作 (Window Action) -->
+    <record id="action_web3_wallet_type" model="ir.actions.act_window">
+        <field name="name">Wallet Types</field>
+        <field name="res_model">web3.wallet.type</field>
+        <field name="view_mode">list,form</field>
+    </record>
+</odoo>

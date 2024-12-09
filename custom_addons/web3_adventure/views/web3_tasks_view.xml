@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo><data>
+
+    <record id="view_web3_tasks_list" model="ir.ui.view">
+        <field name="name">web3.tasks.list</field>
+        <field name="model">web3.tasks</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="sequence"/>
+                <field name="name"/>
+                <field name="project_link"/>
+                <field name="priority"/>
+                <field name="progress"/>
+                <field name="airdrop_date"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="view_web3_tasks_form" model="ir.ui.view">
+        <field name="name">web3.tasks.form</field>
+        <field name="model">web3.tasks</field>
+        <field name="arch" type="xml">
+            <form string="Web3 Tasks">
+                <sheet>
+                    <group>
+
+                    <group>
+                        <field name="project_id"/>
+                        <field name="name"/>
+                        <field name="priority"/>
+                        <field name="progress" readonly="1"/>
+                        <field name="reminder_time"/>
+                    </group>
+                        <group>
+                        <field name="sequence"/>
+                        <field name="snapshot_date" readonly="1"/>
+                        <field name="airdrop_date" readonly="1"/>
+
+                        </group>
+                    </group>
+                    <group>
+                        <field name="project_link" readonly="1"/>
+                        <field name="task_link" readonly="1"/>
+                        <field name="faucet_link" readonly="1"/>
+                        <field name="galxe_task"/>
+                        <field name="description"/>
+                    </group>
+                    <group string="登录信息">
+                        <field name="login_type"/>
+                        <field name="login_account" invisible="login_type != 'self'"/>
+                        <field name="login_password" invisible="login_type != 'self'"/>
+                        <field name="login_wallet" invisible="login_type != 'wallet'"/>
+                        <field name="login_social_account" invisible="login_type != 'social'"/>
+                    </group>
+                    <group string="Web3钱包">
+                        <field name="wallet_ids" nolabel="1"/>
+                    </group>
+                    <group string="社交帐号">
+                        <field name="social_account_ids" nolabel="1"/>
+                    </group>
+                    <group string="其他信息">
+                        <field name="note" readonly="0"/>
+                        <field name="costs" readonly="0"/>
+                        <field name="aridrop_amount" readonly="0"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+<!--
+    <record id="view_web3_tasks_search" model="ir.ui.view">
+        <field name="name">web3.tasks.search</field>
+        <field name="model">web3.tasks</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name"/>
+                <field name="priority"/>
+                <field name="progress"/>
+                <filter string="High Priority" domain="[('priority','=','high')]"/>
+                <filter string="Very High Priority" domain="[('priority','=','very_high')]"/>
+                <filter string="Airdrop Soon" domain="[('airdrop_date','&lt;=',context_today())]"/>
+            </search>
+        </field>
+    </record>
+-->
+    <record id="action_web3_tasks" model="ir.actions.act_window">
+        <field name="name">任务</field>
+        <field name="res_model">web3.tasks</field>
+        <field name="view_mode">list,form</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+                Click to create a new Web3 Task.
+            </p>
+        </field>
+    </record>
+
+
+
+</data></odoo>

@@ -1,0 +1,63 @@
+<odoo>
+    <!-- 列表视图 (list View) -->
+    <record id="view_web3_wallet_list" model="ir.ui.view">
+        <field name="name">web3.wallet.list</field>
+        <field name="model">web3.wallet</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="name"/>
+                <field name="wallet_type_id"/>
+                <field name="wallet_name"/>
+                <field name="main_address"/>
+                <field name="sequence"/>
+            </list>
+        </field>
+    </record>
+
+    <!-- 详情视图 (Form View) -->
+    <record id="view_web3_wallet_form" model="ir.ui.view">
+        <field name="name">web3.wallet.form</field>
+        <field name="model">web3.wallet</field>
+        <field name="arch" type="xml">
+            <form string="Crypto Wallet">
+                <sheet>
+                    <group>
+                        <field name="wallet_type_id"/>
+                        <field name="wallet_name"/>
+                        <field name="main_address"/>
+                        <field name="sequence"/>
+                    </group>
+                    <group>
+                        <field name="address_ids">
+                            <list editable="bottom" multi_edit="1" class="freeze_table">
+                                <field name="currency_ids" widget="many2many_tags"/>
+                                <field name="address"/>
+                            </list>
+                        </field>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- 搜索视图 (Search View) -->
+    <record id="view_web3_wallet_search" model="ir.ui.view">
+        <field name="name">web3.wallet.search</field>
+        <field name="model">web3.wallet</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name"/>
+                <field name="wallet_type_id"/>
+                <field name="wallet_name"/>
+                <field name="main_address"/>
+            </search>
+        </field>
+    </record>
+
+    <!-- 窗口动作 (Window Action) -->
+    <record id="action_web3_wallet" model="ir.actions.act_window">
+        <field name="name">Crypto Wallets</field>
+        <field name="res_model">web3.wallet</field>
+        <field name="view_mode">list,form</field>
+    </record>
+</odoo>
