@@ -7,6 +7,10 @@
     <menuitem id="menu_daily_task_record" name="每日任务清单"
               parent="menu_web3_root" action="action_daily_task_record" sequence="1"/>
 
+    <!-- 脚本任务 菜单 -->
+    <menuitem id="menu_script_tasks" name="脚本任务"
+              parent="menu_web3_root" action="action_script_tasks" sequence="3"/>
+
     <!-- Web3任务列表 菜单 -->
     <menuitem id="menu_web3_tasks" name="Web3任务"
               parent="menu_web3_root" action="action_web3_tasks" sequence="5"/>

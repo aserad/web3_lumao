@@ -6,6 +6,7 @@ from odoo import models, fields, api, _
 class DailyTaskRecord(models.Model):
     _name = 'daily.task.record'
     _rec_name = 'task_id'
+    _order = "operate_date desc, priority desc, id desc"
 
     task_id = fields.Many2one('web3.tasks', string='任务')
     operate_date = fields.Date('日期', default=fields.Date.today())
@@ -22,7 +23,7 @@ class DailyTaskRecord(models.Model):
     login_social_account = fields.Many2one(related='task_id.login_social_account', store=True)
     priority = fields.Selection(related='task_id.priority', store=True)
     sequence = fields.Integer(related='task_id.sequence', store=True)
-    active = fields.Boolean(default=True, string='Active')
+    active = fields.Boolean(default=True, string='有效')
 
     def cron_create_daily_task(self):
         today = fields.Date.today()

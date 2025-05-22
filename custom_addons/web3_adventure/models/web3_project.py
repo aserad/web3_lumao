@@ -13,8 +13,7 @@ class Web3Project(models.Model):
     description = fields.Text(string='描述')  # 任务描述
     note = fields.Html(string='备注')  # 备注
     sequence = fields.Integer(string='序号')
-    priority = fields.Selection([('very_high', '极高'), ('high', '高'),
-                                 ('medium', '中等'), ('low', '低')], string='优先级')  # 项目优先级
+    priority = fields.Selection([('4', '极高'), ('3', '高'), ('2', '中等'), ('1', '低')], string='优先级')  # 项目优先级
     progress = fields.Char(string='进度')  # 项目进度
     snapshot_date = fields.Date(string='预计快照日期')  # 预计快照日期
     airdrop_date = fields.Date(string='预计空投日期')  # 预计空投日期
@@ -29,8 +28,7 @@ class Web3Tasks(models.Model):
     project_id = fields.Many2one('web3.project', required=True, ondelete='restrict', auto_join=True,
                                  index=True, string='Web3项目')
     name = fields.Char(string='名称')
-    priority = fields.Selection([('very_high', '极高'), ('high', '高'),
-                                 ('medium', '中等'), ('low', '低')], string='优先级')  # 任务优先级
+    priority = fields.Selection([('4', '极高'), ('3', '高'), ('2', '中等'), ('1', '低')], string='优先级')  # 任务优先级
     sequence = fields.Integer(string='序号')
     reminder_time = fields.Datetime("每日提醒时间")
     description = fields.Text(string='描述')  # 任务描述

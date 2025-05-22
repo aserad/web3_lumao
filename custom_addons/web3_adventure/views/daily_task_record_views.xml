@@ -14,10 +14,12 @@
                        decoration-success="state == 'done'"
                        decoration-muted="state == 'undone'" widget="badge"/>
                 <field name="priority"
-                       decoration-danger="priority == 'very_high'"
-                       decoration-warning="priority == 'hign'"
-                       decoration-info="priority == 'medium'"
-                       decoration-muted="priority == 'low'" widget="badge"/>
+                       decoration-danger="priority == '4'"
+                       decoration-warning="priority == '3'"
+                       decoration-info="priority == '2'"
+                       decoration-muted="priority == '1'" widget="badge"/>
+                <button name="action_done" type="object" string="标记完成"
+                        invisible="state != 'todo'"/>
             </list>
         </field>
     </record>
@@ -42,10 +44,10 @@
                                decoration-muted="state == 'undone'" widget="badge"/>
                         <field name="sequence"/>
                         <field name="priority"
-                               decoration-danger="priority == 'very_high'"
-                               decoration-warning="priority == 'hign'"
-                               decoration-info="priority == 'medium'"
-                               decoration-muted="priority == 'low'" widget="badge"/>
+                               decoration-danger="priority == '4'"
+                               decoration-warning="priority == '3'"
+                               decoration-info="priority == '2'"
+                               decoration-muted="priority == '1'" widget="badge"/>
                         <field name="active" invisible="1"/>
                     </group>
                     <group string="任务信息">

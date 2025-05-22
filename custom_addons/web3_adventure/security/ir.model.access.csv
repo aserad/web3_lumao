@@ -1,6 +1,7 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
 access_web3_project,access_web3_project,model_web3_project,base.group_system,1,1,1,1
 access_web3_tasks,access_web3_tasks,model_web3_tasks,base.group_system,1,1,1,1
+access_script_tasks,access_script_tasks,model_script_tasks,base.group_system,1,1,1,1
 access_daily_task_record,access_daily_task_record,model_daily_task_record,base.group_system,1,1,1,1
 access_social_account_type,access_social_account_type,model_social_account_type,base.group_system,1,1,1,1
 access_social_account,access_social_account,model_social_account,base.group_system,1,1,1,1

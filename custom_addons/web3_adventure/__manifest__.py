@@ -20,6 +20,7 @@
         'views/web3_wallet_type_view.xml',
         'views/web3_wallet_view.xml',
         'views/daily_task_record_views.xml',
+        'views/script_tasks_view.xml',
         'views/menu_item_view.xml',
 
         'data/social_account_type.xml',

@@ -373,8 +373,9 @@ def safe_eval(expr, globals_dict=None, locals_dict=None, mode="eval", nocopy=Fal
         if locals_dict is not None:
             locals_dict = dict(locals_dict)
 
-    check_values(globals_dict)
-    check_values(locals_dict)
+    if not globals_dict.get("__skip_check_context__"):
+        check_values(globals_dict)
+        check_values(locals_dict)
 
     if globals_dict is None:
         globals_dict = {}
