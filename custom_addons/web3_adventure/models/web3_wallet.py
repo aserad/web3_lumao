@@ -15,16 +15,10 @@ cipher = Fernet(ferent_key.encode())
 
 def is_fernet_encrypted(value: str) -> bool:
     try:
-        base64.b64decode(value.encode(), validate=True)
-        try:
-            cipher.decrypt(value.encode())
-            return True
-        except:
-            return False
+        cipher.decrypt(value.encode())
+        return True
     except:
         return False
-
-
 
 
 class Web3WalletType(models.Model):

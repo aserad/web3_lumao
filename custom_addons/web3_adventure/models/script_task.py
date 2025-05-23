@@ -19,7 +19,7 @@ from collections import defaultdict
 
 import odoo
 from odoo import models, fields, api
-from odoo.exceptions import ValidationError, AccessError
+from odoo.exceptions import ValidationError, AccessError, UserError
 from odoo.tools.func import lazy_property
 from odoo.tools.safe_eval import (wrap_module, json as safe_json, datetime as safe_datetime,
                                   dateutil as safe_dateutil, time as safe_time, pytz as safe_pytz)
@@ -87,6 +87,13 @@ class ScriptTasks(models.Model):
     # 信息查询相关字段
     search_code = fields.Text("查询代码", default=DEFAULT_PYTHON_CODE)
     search_result = fields.Text("查询结果")
+
+    def write(self, vals):
+        try:
+            self.cron_id._try_lock()
+        except:
+            raise UserError("当前任务在执行中，无法修改，请稍后再试")
+        return super().write(vals)
 
     def unlink(self):
         if self.execute_status == 'running':
@@ -170,7 +177,7 @@ class ScriptTasks(models.Model):
             "execute_duration": t2 - t1,
             "running_log": '\n'.join(log_buffer)
         })
-        return res
+        return res, '\n'.join(log_buffer)
 
     def action_activate_script(self):
         self.ensure_one()
@@ -183,7 +190,7 @@ class ScriptTasks(models.Model):
                 'name': self.name,
                 'model_id': self.env['ir.model']._get_id(self._name),
                 'state': 'code',
-                'code': f"env['{self._name}'].browse({self.id}).exists().execute()",
+                'code': f"_, log_msg = env['{self._name}'].browse({self.id}).exists().execute()\nlog(log_msg)",
             }])
             self.cron_id = cron.id
         else:
