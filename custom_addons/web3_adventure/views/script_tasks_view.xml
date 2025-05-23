@@ -44,7 +44,8 @@
                                        decoration-danger="execute_status == 'stopped'"
                                        decoration-success="execute_status == 'running'"/>
                                 <field name="next_execute_time" readonly="0"/>
-                                <field name="cron_id" readonly="1" invisible="1"/>
+                                <field name="cron_id" readonly="1" invisible="0"/>
+                                <field name="use_wallets" widget="many2many_tags"/>
                                 <field name="description" readonly="0"/>
                             </group>
                             <group>

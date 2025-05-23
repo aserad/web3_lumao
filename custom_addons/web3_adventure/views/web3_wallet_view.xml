@@ -20,20 +20,19 @@
         <field name="model">web3.wallet</field>
         <field name="arch" type="xml">
             <form string="Crypto Wallet">
+                <header>
+                    <button name="read_private_key" string="复制私钥" type="object" class="oe_highlight"
+                                invisible="private_key == False"/>
+                </header>
                 <sheet>
                     <group>
                         <field name="wallet_type_id"/>
                         <field name="wallet_name"/>
                         <field name="main_address"/>
+                        <field name="memo"/>
+                        <field name="private_key"/>
                         <field name="sequence"/>
-                    </group>
-                    <group>
-                        <field name="address_ids">
-                            <list editable="bottom" multi_edit="1" class="freeze_table">
-                                <field name="currency_ids" widget="many2many_tags"/>
-                                <field name="address"/>
-                            </list>
-                        </field>
+                        <field name="currency_ids" widget="many2many_tags"/>
                     </group>
                 </sheet>
             </form>

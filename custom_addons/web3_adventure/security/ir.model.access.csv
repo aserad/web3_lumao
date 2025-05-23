@@ -6,6 +6,5 @@ access_daily_task_record,access_daily_task_record,model_daily_task_record,base.g
 access_social_account_type,access_social_account_type,model_social_account_type,base.group_system,1,1,1,1
 access_social_account,access_social_account,model_social_account,base.group_system,1,1,1,1
 access_web3_currency_type,access_web3_currency_type,model_web3_currency_type,base.group_system,1,1,1,1
-access_web3_wallet_address,access_web3_wallet_address,model_web3_wallet_address,base.group_system,1,1,1,1
 access_web3_wallet_type,access_web3_wallet_type,model_web3_wallet_type,base.group_system,1,1,1,1
 access_web3_wallet,access_web3_wallet,model_web3_wallet,base.group_system,1,1,1,1

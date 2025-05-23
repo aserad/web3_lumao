@@ -5,6 +5,7 @@ from odoo import models, fields, api, _
 
 class DailyTaskRecord(models.Model):
     _name = 'daily.task.record'
+    _description = "每日任务清单"
     _rec_name = 'task_id'
     _order = "operate_date desc, priority desc, id desc"
 

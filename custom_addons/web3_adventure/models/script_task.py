@@ -68,9 +68,11 @@ def my_wrap(mod, wrap_attrs):
 
 class ScriptTasks(models.Model):
     _name = 'script.tasks'
+    _description = "脚本任务"
 
     name = fields.Char("名称", required=True)
     description = fields.Char("描述")
+    use_wallets = fields.Many2many("web3.wallet", string="任务钱包")
 
     # 执行脚本相关字段
     python_code = fields.Text("脚本代码", default=DEFAULT_PYTHON_CODE)
@@ -113,6 +115,7 @@ class ScriptTasks(models.Model):
             'time': safe_time,
             'datetime': safe_datetime,
             'dateutil': safe_dateutil,
+            'pytz': safe_pytz,
             'timezone': safe_pytz.timezone,
 
             'json': safe_json,
